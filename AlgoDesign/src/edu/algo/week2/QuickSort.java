@@ -14,6 +14,9 @@ public class QuickSort {
 		if(n<=1)
 			return comparisons;
 		int newPivot = median(array,l,r);
+		//q 1 no swap
+		
+		//q3 swap with median
 		Collections.swap(array,l,newPivot);
 		// q 2.Collections.swap(array,l,r);
 		int pivot = array.get(l);
@@ -44,7 +47,6 @@ public class QuickSort {
 		for (int i = from, j = 0; i <= to; i++) {
 
 			retArr[j++] = arr[i];
-			// System.out.println("Ret arr j"+retArr[j]);
 		}
 		return retArr;
 

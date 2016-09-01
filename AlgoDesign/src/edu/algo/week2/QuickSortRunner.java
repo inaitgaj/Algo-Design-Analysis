@@ -13,11 +13,10 @@ public static void main(String[] args) {
 	//int[] a=new int[8];
 	int i=0;
 	try {
-		File f = new File("C:\\Users\\nikhiljagtiani\\HybrisWorkspace\\InversionsRanking\\src\\edu\\algo\\week2\\QuickSortTestCase.txt");
+		File f = new File("QuickSortTestCase.txt");
 		Scanner file = new Scanner(f);
 		while(file.hasNextInt()){
 			a.add(file.nextInt());
-			System.out.println(" for i="+i+", a[i] = "+a.get(i));
 			i++;
 		}
 		
@@ -25,19 +24,11 @@ public static void main(String[] args) {
 		// TODO Auto-generated catch block
 		System.out.println(e.getMessage());
 	}
-	System.out.println("Size of a being passed:"+a.size());
-	/*int count=0;
-	int first = a[0];
-	for(int j = 1; j<10000;j++){
-		if(a[j]<first){
-			count++;
-		}
-	}
-	System.out.println("count:"+count+"first:"+first);*/
+
 	QuickSort qs = new QuickSort();
 	long b = qs.quickSort(a, 0, a.size() - 1);
 	
-		System.out.println("Returned sorted[comparisons] is "+b);
+	System.out.println("Returned median pivot sorted[comparisons] is "+b);
 	
 }
 }
