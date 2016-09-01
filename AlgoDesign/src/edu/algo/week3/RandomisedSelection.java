@@ -19,11 +19,17 @@ import java.util.Random;
 public class RandomisedSelection {
 
 	/**
-	 * 
+	 * RSelect - Uses quick sort
+	 * Main principle : Partition subroutine returns with Pivot at its sorted place.
+	 * Pivot index can be compared to orderStatistic 
+	 * Recurse once: a = 1, problem size becomes half: b=2, out recursion partition grows as O(n): d=1
+	 * Hence by Master Method, Case 2: a<b^d
+	 * <b> T(n) = O(n) </b>
 	 * @param arr the List of Integer.
 	 * @param orderStat Order Statistic 0 to length (place in sorted array)
 	 * @return Integer = which is order statistic in the List passed
 	 */
+
 	public Integer RSelect(List<Integer> arr, int orderStat) {
 		int len = arr.size();
 		if (len == 1) {
